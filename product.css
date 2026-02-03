@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+}
+
+.container{
+    width: 1216px;
+    margin: 0 auto;
+}
+
+.detail-card {
+    width: 600px;
+    margin: 20px auto;
+    border: 1px solid red;
+}
+
+.detail__image {
+    padding: 10px;
+}
+
+.detail__info {
+    padding: 20px;
+}
+
+.detail__title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.detail__category, .detail__price, .detail__description, .detail__stock, .detail__rating {
+    margin-bottom: 10px;
+    display: block;
+}

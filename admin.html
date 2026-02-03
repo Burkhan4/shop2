@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin - Yangi mahsulot qo'shish</title>
+    <link rel="stylesheet" href="./admin.css" />
+    <!-- agar alohida css kerak bo'lsa -->
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+      label {
+        display: block;
+        margin: 12px 0 5px;
+        font-weight: bold;
+      }
+      input,
+      textarea,
+      select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      button {
+        padding: 12px 25px;
+        background: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      button:hover {
+        background: #218838;
+      }
+      #message {
+        margin-top: 20px;
+        padding: 12px;
+        border-radius: 4px;
+      }
+      .success {
+        background: #d4edda;
+        color: #155724;
+      }
+      .error {
+        background: #f8d7da;
+        color: #721c24;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Yangi mahsulot qo'shish</h1>
+    <form id="productForm">
+      <label for="name">Nomi *</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="category">Kategoriya *</label>
+      <input
+        type="text"
+        id="category"
+        name="category"
+        required
+        placeholder="Masalan: Computers, Phones"
+      />
+
+      <label for="price">Narxi ($) *</label>
+      <input
+        type="number"
+        id="price"
+        name="price"
+        step="0.01"
+        required
+        min="0"
+      />
+
+      <label for="description">Tavsif</label>
+      <textarea id="description" name="description" rows="4"></textarea>
+
+      <label for="image">Rasm fayli yuklang *</label>
+      <input type="file" id="image" name="image" accept="image/*" required />
+
+      <label for="stock">Qoldiq soni *</label>
+      <input type="number" id="stock" name="stock" required min="0" />
+
+      <label for="rating">Reyting (0-5) *</label>
+      <input
+        type="number"
+        id="rating"
+        name="rating"
+        step="0.1"
+        min="0"
+        max="5"
+        required
+      />
+
+      <button type="submit">Mahsulotni qo'shish</button>
+    </form>
+
+    <div id="message"></div>
+
+    <script src="./admin.js"></script>
+  </body>
+</html>
